@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xay dung </title>
+</head>
+<body>
+<script src="myjs.js"></script>
+<script type="text/javascript">
+
+
+    //Bai toan: Xay dung ham tra ve tong cua 2 so bat ky.
+    //1. Muc dich: Tinh tong cua 2 so bat ky
+    //2. Ten ham: calSum
+    //3: Tham so dau vao: 2 so bat ky
+    //4: Dau ra (Kieu du lieu tra ve cua ham): tra ve mot so, so nay duoc su dung de luu tong cua 2 so bat ky
+
+    /*
+    --Cu phap tao ham trong JavaScript
+    function tenHam(tham_so_dau_vao1, tham_so_dau_vao2, .....){
+        //cac lenh - than ham
+        return gia_tri;
+    }*/
+
+    //Dinh nghia ham HAY Tao ham
+    function calSum(firstNumber, secondNumber) {
+        var total = firstNumber + secondNumber;
+        return total;
+    }
+
+    //Goi ham - Su dung ham
+    //--Cu phap
+    //var ketqua = tenHam(gia_tri_tham_so1, gia_tri_tham_so2, ....);
+
+    var kq1 = calSum(4, 5);
+
+    var number1 = 10, number2 = 30;
+    var kq2 = calSum(number1, number2);
+
+    document.write("Ket qua 1: " + kq1);
+    document.write("Ket qua 2: " + kq2);
+
+    alert("...");
+
+</script>
+</body>
+</html>

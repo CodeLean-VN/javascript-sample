@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May tinh don gian</title>
+</head>
+<body>
+<script type="text/javascript">
+    function calculate(operator) {
+        var firstNumber = document.getElementById("firstNumber").value;
+        var secondNumber = document.getElementById("secondNumber").value;
+        var result = 0;
+
+        switch (operator) {
+            case "+":
+                result = Number(firstNumber) + Number(secondNumber);
+                break;
+            case "-":
+                result = Number(firstNumber) - Number(secondNumber);
+                break;
+            case "*":
+                result = Number(firstNumber) * Number(secondNumber);
+                break;
+            case "/":
+                result = Number(firstNumber) / Number(secondNumber);
+                break;
+        }
+        alert("Ket qua: " + result);
+    }
+
+</script>
+<form>
+    Number 1: <input id="firstNumber" type="text">
+    <br/>
+    Number 2: <input id="secondNumber" type="text">
+    <br/>
+    <input onclick="calculate('+')" type="button" value="+">
+    <input onclick="calculate('-')" type="button" value="-">
+    <input onclick="calculate('*')" type="button" value="*">
+    <input onclick="calculate('/')" type="button" value="/">
+</form>
+
+</body>
+</html>

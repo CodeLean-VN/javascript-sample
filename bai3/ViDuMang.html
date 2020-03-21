@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vi du ve mang</title>
+</head>
+<body>
+<script type="text/javascript">
+    //Bai toan: Tinh tong cua 10 so nguyen bat ky
+
+    //Cach 1: Su dung 100 bien
+    var num1, num2, num3, num4, num5, num6, num7, num8, num9, num10;
+    var sum = 0;
+    sum = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10;
+    alert("Sum: " + sum);
+
+    //Cach 2: Su dung 1 bien ket hop voi vong lap
+    var num;
+    var i = 0;
+    sum = 0;
+    while (i < 10) {
+        num = prompt("num: ");
+        sum = sum + num;
+    }
+
+    //Cach 3: Su dung mang
+    //Cach 1 khai bao mang: var aryNumber = {};
+    //Cach 2 khai bao mang
+    var aryNumber = new Array();
+    i = 0;
+    sum = 0;
+    while (i < 10) {
+        aryNumber[i] = prompt("aryNumber[" + i + "]: ");
+        sum = sum + aryNumber[i];
+    }
+
+    //in phan tu thu 2
+    document.write(aryNumber[1]);
+
+</script>
+</body>
+</html>

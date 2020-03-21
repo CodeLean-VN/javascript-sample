@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May tinh don gian</title>
+</head>
+<body>
+<script type="text/javascript">
+    function calSum() {
+        var firstNumber = document.getElementById("firstNumber").value;
+        var secondNumber = document.getElementById("secondNumber").value;
+
+        var sum = Number(firstNumber) + Number(secondNumber);
+
+        alert("Tong cua hai so la: " + sum);
+    }
+
+    function calSub() {
+        var firstNumber = document.getElementById("firstNumber").value;
+        var secondNumber = document.getElementById("secondNumber").value;
+
+        var sub = Number(firstNumber) - Number(secondNumber);
+
+        alert("Hieu cua hai so la: " + sub);
+    }
+
+    function calMul() {
+        var firstNumber = document.getElementById("firstNumber").value;
+        var secondNumber = document.getElementById("secondNumber").value;
+
+        var mul = Number(firstNumber) * Number(secondNumber);
+
+        alert("Tich cua hai so la: " + mul);
+    }
+
+    function calDiv() {
+        var firstNumber = document.getElementById("firstNumber").value;
+        var secondNumber = document.getElementById("secondNumber").value;
+
+        var div = Number(firstNumber) / Number(secondNumber);
+
+        alert("Thuong cua hai so la: " + div);
+    }
+
+</script>
+<form>
+    Number 1: <input id="firstNumber" type="text">
+    <br/>
+    Number 2: <input id="secondNumber" type="text">
+    <br/>
+    <input onclick="calSum()" type="button" value="+">
+    <input onclick="calSub()" type="button" value="-">
+    <input onclick="calMul()" type="button" value="*">
+    <input onclick="calDiv()" type="button" value="/">
+</form>
+
+</body>
+</html>

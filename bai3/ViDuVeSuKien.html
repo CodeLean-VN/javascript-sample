@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Su kien</title>
+</head>
+<body>
+<script type="text/javascript">
+    function xuLyDangNhap() {
+        //Lay gia tri tu textfield username
+        var user = document.getElementById("username").value;
+        //Lay gia tri tu textfield password
+        var pass = document.getElementById("password").value;
+
+        if (user == "") {
+            alert("ko duoc de trong truong username!");
+            return;
+        } else {
+            alert("Welcome: " + user + " and " + pass);
+        }
+    }
+</script>
+<form>
+    Form Login
+    <br/>
+    Username: <input id="username" type="text">
+    <br/>
+    Password: <input id="password" type="password">
+    <br/>
+    <input onclick="xuLyDangNhap()" type="button" value="Submit">
+</form>
+</body>
+</html>

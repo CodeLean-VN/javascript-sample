@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+<script type="text/javascript">
+    //Dinh nghia ham - Tao ham
+    //1. Muc dich: Kiem tra xem du lieu dua vao co phai la so hay khong
+    //2. Ten ham: isNumber
+    //3. Tham so dau vao: la mot so bat ky
+    //4. Dau ra: khong co tham so dau ra
+    function isNumber(number) {
+        if (isNaN(number) == true) {
+            alert(number + " khong phai la so!.");
+        } else {
+            alert(number + " la mot so.!")
+        }
+    }
+
+    //Goi ham
+    var num = prompt("Nhap vao gia tri cho num: ");
+    isNumber(num);
+</script>
+</body>
+</html>

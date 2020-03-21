@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau truc dieu kien</title>
+</head>
+<body>
+<script type="text/javascript">
+    //Bai toan:
+    // - Khai bao mot so bat ky và gán giá trị cho nó.
+    // - Neu so do la 1, 2, 3, 4, 5, 6, 7, 8, 9 thi hien thi chuoi: So ban vua khai bao nho hon 10
+    // - Neu so la 11, 12, 13, 14, 15, 16, 17, 18, 19  thi hien thi chuoi: so ban vua khai bao nho hon 20 va lon hon 10
+    // - Con lai thi hien thi chuoi: So do lon hon 20 hoac la so am
+
+    var number = 2;
+    //Cach 1: if-else
+    if (number == 1 || number == 2 || number == 3 || number == 4 || number == 5 || number == 6 || number == 7 || number == 8 || number == 9) {
+        alert("So ban vua khai bao nho hon 10");
+    } else if (number == 11 || number == 12 || number == 13 || number == 14 || number == 19) {
+        alert("so ban vua khai bao nho hon 20 va lon hon 10");
+    } else {
+        alert("So do lon hon 20 hoac la so am");
+    }
+
+
+    //Cach 2
+    if (number >= 1 && number <= 9) {
+        alert("So ban vua khai bao nho hon 10");
+    } else if (number >= 11 && number <= 19) {
+        alert("so ban vua khai bao nho hon 20 va lon hon 10");
+    } else {
+        alert("So do lon hon 20 hoac la so am");
+    }
+
+    //Cach 3: switch-case
+    switch (number) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+            alert("So ban vua khai bao nho hon 4");
+            break;
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+        case 15:
+        case 16:
+        case 17:
+        case 18:
+        case 19:
+            alert("so ban vua khai bao nho hon 8 va lon hon 3");
+        default:
+            alert("So do lon hon 8 hoac la so am");
+    }
+
+</script>
+</body>
+</html>
