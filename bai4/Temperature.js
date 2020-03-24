@@ -5,7 +5,8 @@ function Temperature(degreeC) {
     //3. Dau vao: khong co
     //4. Dau ra: do F
     this.convertToF = function () {
-        degreeF = (this.degreeC - 32) / 18;
+        degreeF = (degreeC - 32) / 18;
+        document.write(degreeF);
         return degreeF;
     }
 }
