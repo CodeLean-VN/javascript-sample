@@ -8,8 +8,8 @@
 <script type="text/javascript">
     //Bai toan: Tinh tong cua 10 so nguyen bat ky
 
-    //Cach 1: Su dung 100 bien
-    var num1, num2, num3, num4, num5, num6, num7, num8, num9, num10;
+    //Cach 1: Su dung 10 bien
+    var num1 = 10, num2 = 4, num3 = 6, num4 = 6, num5 = 8, num6, num7, num8, num9, num10;
     var sum = 0;
     sum = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10;
     alert("Sum: " + sum);
@@ -21,10 +21,11 @@
     while (i < 10) {
         num = prompt("num: ");
         sum = sum + num;
+        i = i + 1;
     }
 
     //Cach 3: Su dung mang
-    //Cach 1 khai bao mang: var aryNumber = {};
+    //Cach 1 khai bao mang: var aryNumber = {3, 5, 6, 7, 9, 2};
     //Cach 2 khai bao mang
     var aryNumber = new Array();
     i = 0;
@@ -36,6 +37,11 @@
 
     //in phan tu thu 2
     document.write(aryNumber[1]);
+    aryNumber[0] = 9;
+    aryNumber[1] = 10;
+    aryNumber[2] = 1;
+    aryNumber[3] = 4;
+    aryNumber[9];
 
 </script>
 </body>

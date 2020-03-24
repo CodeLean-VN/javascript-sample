@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xay dung lop Temperature</title>
+</head>
+<body>
+<script src="Temperature.js"/>
+<script type="text/javascript">
+    //tao doi tuong nhiet do
+    var degreeC = 32;
+    var tempC = new Temperature(degreeC);
+
+    //Goi ham chuyen sang do F
+    var degreeF = tempC.convertToF();
+
+    //hien thi do F
+    document.write(degreeC + " convert to F is: " + degreeF);
+</script>
+</body>
+</html>

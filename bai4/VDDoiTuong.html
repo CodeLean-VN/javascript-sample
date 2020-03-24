@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mo ta quyen sach</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    //1.Mo ta ve quyen Sach (Đặc điểm của đối tượng) => Thuoc tinh (bien)
+    //Thuoc tinh lop Sach
+    //- ten sach
+    //- tac gia
+    //- gia
+    //- nha xuat ban
+    //- so trang
+    //2. Noi ve kha nang cua quyen sach (Hành vi của đối tượng)tinh => Phương thức (ham)
+    //- hien thi thong tin ve quyen sach
+    //- tra ve ten sach
+    //- thay doi ten sach
+
+    //3. Cu phap tao lop
+    /*function tenLop (thuoctinh1, thuoctinh2, thuoctinh3, ....){
+        //1.khoi tao gia tri ban dau cho thuoc tinh
+
+        //2.Xay dung cac phuong thuc cua lop
+        this.tenPhuongThuc1 = function (tham_so_dau_vao1, tham_so_dau_vao2) {
+            //phan than cua phuong thuc
+        }
+
+        this.tenPhuongThuc2 = function (tham_so_dau_vao) {
+            //phan than cua phuong thuc
+        }
+
+        this.tenPhuongThuc3 = function () {
+            //phan than cua phuong thuc
+        }
+    }*/
+
+    //4. Tao lop sach
+    function Sach(tenSach, tenTacGia, gia, soTrang, nhaXuatBan) {
+
+        //khoi tao cac gia tri ban dau cho thuoc tinh
+        /*this.tenSach = "JavaScript 1";
+        this.tenTacGia = "FPoly";
+        this.gia = 10;
+        this.soTrang = 500;
+        this.nhaXuatBan = "FPoly"; */
+
+
+        //1. Muc dich: Thay doi ten sach thanh ten sach moi
+        //2. Ten phuong thuc: setTenSach()
+        //3. Dau vao: ten sach moi
+        //4. Dau ra: khong co dau ra
+        this.setTenSach = function (tenSachMoi) {
+            tenSach = tenSachMoi;
+        }
+
+
+        //Xay dung cac phuong thuc cua lop sach
+        //1. Muc dich: Tra ve ten sach
+        //2. Ten phuong thuc: getTenSach()
+        //3. Dau vao: khong co
+        //4. Dau ra: Tra ve ten sach la mot chuoi
+        this.getTenSach = function () {
+            return tenSach;
+        }
+
+        //1. Muc dich: In thong tin sach
+        //2. Ten phuong thuc: inThongTinSach
+        //3. Tham so dau vao: ko co
+        //4. Dau ra: khong co
+        this.inThongTinSach = function () {
+            document.write("<br/>Thong tin sach")
+            document.write("<br/>Ten sach: " + tenSach);
+            document.write("<br/>Tac gia: " + tenTacGia);
+            document.write("<br/>Gia: " + gia);
+            document.write("<br/>So trang: " + soTrang);
+            document.write("<br/>Nha xuat ban: " + nhaXuatBan);
+        }
+    }
+
+    ///Tao doi tuong
+    //Cu phap
+    //var tenDoiTuong = new TenLop(giatrithuoctinh1, giatrithuoctinh2, giatrithuoctinh3, .....);
+
+    //Vi du
+    var objJava = new Sach("Java Programming", "FPoly", 12, 200, "FPoly");
+
+
+    var tenSach1 = "HTML";
+    var tacGia1 = "Kim Dong";
+    var gia1 = 8;
+    var soTrang1 = 100;
+    var nhaXuatBan1 = "Tien Phong"
+    var objHTML = new Sach(tenSach1, tacGia1, gia1, soTrang1, nhaXuatBan1);
+
+
+    //Truy cap (hay la goi) cac thanh phan cua lop (thanh phan cua lop gom: thuoc tinh va phuong thuc)
+    //Cu phap
+    //tenDoiTuong.tenThuocTinh = Gia_tri_duoc_gan_cho_thuoc_tinh;
+    //tenDoiTuong.tenPhuongThuc(giatri_thamso1, giatri_thamso2, ....); //neu co tham so.
+
+    //Vi du
+    objJava.inThongTinSach();
+    objHTML.inThongTinSach();
+
+    //thay doi ten sach Java => C#
+    document.write("<br/>Doi ten sach Java => C#");
+    var tenSachMoi = "C# Programming";
+    objJava.setTenSach(tenSachMoi);
+    //lay thong tin sach vua thay doi
+    var tenSachMoiLayVe = objJava.getTenSach();
+    document.write("<br/><br/>Ten sach duoc toi: " + tenSachMoiLayVe);
+
+    //in lai doi tuong objJava
+    document.write("<br/>In lai thong tin doi tuong objJava: ");
+    objJava.inThongTinSach();
+
+    var str1 = "Hello";
+    var str2 = str1.toLowerCase();
+    str1.inThongTinSach(); //sai
+    objJava.toLowerCase(); //sai
+
+
+    //1. Mo ta ve hinh tron
+    //ban kinh: 5cm
+    //mau sach: do
+    //2. kha nang hinh tron
+    //nem
+    //...
+
+
+    //1. Mo ta ve hinh chu nhat
+    //chieu dai: 10cm
+    //chieu rong: 20cmnhan
+    //2. Noi ve kha nang cua hinh chu nhat
+    //che mua
+    //lam tru
+    //...
+
+
+    //1.Mo ta ve cai dien thoai
+    //chieu dai: 10cm
+    //chieu rong: 20cm
+    //mau sac: den
+    //ten dien thoai: nokia1200
+    //hang san xuat: nokia
+    //man hinh: phang
+    //ban phim: co
+    //.....
+    //2.Noi ve kha nang cua cai dien thoai
+    //Nghe
+    //Goi
+    //tra loi tin
+
+
+</script>
+</body>
+</html>
