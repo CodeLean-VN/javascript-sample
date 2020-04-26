@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>On Tap ve Ham</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    //1. Mục đích: Tìm phần tử trong một mảng cho sẵn
+    //2. Ten hàm: searchByElement
+    //3. Dau vao: mang, phan tu can tim
+    //4. Tra ve - 1 neu phan tu khong nam trong mang, con lai tra ve vi tri cua phan tu do trong mang
+    function searchByElement(array, element) {
+        var index = -1;
+
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] == element) {
+                index = i;
+            }
+        }
+        return index;
+    }
+
+    //su dung ham
+    var myarray = [4, 6, 7, 2, 17, 3];
+    var element = 7;
+    var position = searchByElement(myarray, element);
+    if (position == -1) {
+        alert("Khong tim thay " + element + " trong mang!");
+    } else {
+        alert(element + " nam o vi tri thu " + position);
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="newproduct">
+    <p style="font-weight: bold; font-size: 24px">Create New Product</p>
+
+    <form action="javascript:void(0);" id="frNew" onsubmit="productManagement.add(this)">
+        <table>
+            <tr>
+                <td>ID:</td>
+                <td><input id="idProduct" type="text"></td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td><input id="nameProduct" type="text"></td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td><input id="priceProduct" type="text"></td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="Add">
+        </table>
+    </form>
+</div>
+</body>
+</html>

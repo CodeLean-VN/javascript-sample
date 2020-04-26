@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vi du ve </title>
+</head>
+<body>
+<script type="text/javascript">
+    function changeText() {
+        var content = document.getElementById("content1");
+        content.innerHTML = "Noi dung cua the p da duoc thay doi";
+    }
+
+    function changeText1() {
+        var myvar = document.getElementsByClassName("var1");
+        myvar[1].innerHTML = "Ban vua thay doi noi dung the p1";
+
+    }
+
+</script>
+<p id="content1" onclick="changeText()"> Day la the p</p>
+
+<p class="var1" onclick="changeText1()"> The p 1</p>
+<p class="var1" onclick="changeText1()"> The p 2</p>
+<p class="var1" onclick="changeText1()"> The p 3</p>
+<p class="var1" onclick="changeText1()"> The p 1</p>
+</body>
+</html>

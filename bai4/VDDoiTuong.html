@@ -39,15 +39,6 @@
 
     //4. Tao lop sach
     function Sach(tenSach, tenTacGia, gia, soTrang, nhaXuatBan) {
-
-        //khoi tao cac gia tri ban dau cho thuoc tinh
-        /*this.tenSach = "JavaScript 1";
-        this.tenTacGia = "FPoly";
-        this.gia = 10;
-        this.soTrang = 500;
-        this.nhaXuatBan = "FPoly"; */
-
-
         //1. Muc dich: Thay doi ten sach thanh ten sach moi
         //2. Ten phuong thuc: setTenSach()
         //3. Dau vao: ten sach moi
@@ -92,7 +83,7 @@
     var tacGia1 = "Kim Dong";
     var gia1 = 8;
     var soTrang1 = 100;
-    var nhaXuatBan1 = "Tien Phong"
+    var nhaXuatBan1 = "Tien Phong";
     var objHTML = new Sach(tenSach1, tacGia1, gia1, soTrang1, nhaXuatBan1);
 
 
@@ -107,7 +98,7 @@
 
     //thay doi ten sach Java => C#
     document.write("<br/>Doi ten sach Java => C#");
-    var tenSachMoi = "C# Programming";
+    var tenSachMoi = "AdvJava Programming";
     objJava.setTenSach(tenSachMoi);
     //lay thong tin sach vua thay doi
     var tenSachMoiLayVe = objJava.getTenSach();
@@ -117,10 +108,10 @@
     document.write("<br/>In lai thong tin doi tuong objJava: ");
     objJava.inThongTinSach();
 
-    var str1 = "Hello";
-    var str2 = str1.toLowerCase();
-    str1.inThongTinSach(); //sai
-    objJava.toLowerCase(); //sai
+    //var str1 = "Hello";
+    //var str2 = str1.toLowerCase();
+    //str1.inThongTinSach(); //sai
+    //objJava.toLowerCase(); //sai
 
 
     //1. Mo ta ve hinh tron

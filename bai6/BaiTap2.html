@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai tap 2</title>
+</head>
+<body>
+<script type="text/javascript">
+    function addToCart() {
+        var p1 = document.getElementById("p1");
+        alert(p1);
+        var pGioHang = document.getElementById("gioHang");
+        pGioHang.appendChild(row);
+    }
+
+    function thanhTien() {
+
+    }
+</script>
+
+DANH MỤC HÀNG HOÁ
+<p id="p1">iPhone9 $2700</p> <input onclick="addToCart()" type="button" value="Thêm">
+<p id="p2">Samsung star $1500</p> <input onclick="addToCart()" type="button" value="Thêm">
+<p id="p3">Nokia 2020 $>1200</p> <input onclick="addToCart()" type="button" value="Thêm">
+<p id="p4">Sony Xperia $1700</p> <input onclick="addToCart()" type="button" value="Thêm">
+
+
+GIỎ HÀNG CỦA BẠN
+<div id="gioHang"></div>
+<input onclick="thanhTien()" type="button" value="Thanh Tien">
+<p>TỔNG SỐ TIỀN: $<span id="tongTien">6100</span></p>
+</body>
+</html>

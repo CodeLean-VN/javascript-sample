@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<script type="text/javascript">
+    function checkForm() {
+        var user = document.frUser.txtUser;
+        if (user.value == "") {
+            alert("Ban khong duoc de trong user");
+            user.focus();
+        }
+    }
+</script>
+<body>
+
+<form name="frUser">
+    User: <input name="txtUser" type="text">
+    <br/>
+    Pass: <input name="txtPass" type="password">
+    <br/>
+    Gioi tinh: <input name="gender" type="radio"> Nam |
+    <input name="gender" type="radio"> Nu
+    <br/>
+    So thich:
+    <input name="hobby" type="checkbox"> Doc sach |
+    <input name="hobby" type="checkbox"> Nghe nhac |
+    <input name="hobby" type="checkbox"> Xem phim |
+    <input name="hobby" type="checkbox"> Code
+    <br/>
+    Thanh pho
+    <select name="thanhPho">
+        <option>Ha Noi</option>
+        <option>Da Nang</option>
+        <option>Hue</option>
+        <option>Nha Trang</option>
+    </select>
+    <br/>
+    <input name="submit" onclick="checkForm()" type="button" value="Submit">
+</form>
+
+</body>
+</html>

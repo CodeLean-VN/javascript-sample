@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Management</title>
+    <style>
+        #newproduct {
+            display: none;
+        }
+
+        #editproduct {
+            display: none;
+        }
+    </style>
+</head>
+<script src="Product.js"></script>
+<script src="ProductManagement.js"></script>
+
+<body onload="appRun()">
+<a href="#" onclick="createNew()">Create new</a>
+
+<div id="newproduct">
+    <form action="javascript:void(0);" id="frNew" onsubmit="productManagement.add(this)">
+        ID: <input id="idProduct" type="text"> <br/>
+        Name: <input id="nameProduct" type="text"> <br/>
+        Price: <input id="priceProduct" type="text"> <br/>
+
+        <input type="submit" value="Add"><a onclick="closeNew()">&#10006;</a>
+    </form>
+</div>
+
+<div id="editproduct">
+    <form action="javascript:void(0);" id="frEdit" onsubmit="productManagement.edit(this)">
+        ID: <input id="idProductEdit" type="text"> <br/>
+        Name: <input id="nameProductEdit" type="text"> <br/>
+        Price: <input id="priceProductEdit" type="text"> <br/>
+
+        <input id="idSave" type="submit" value="Save"><a onclick="closeEdit()">&#10006;</a>
+    </form>
+</div>
+
+<table border="0" cellpadding="6" cellspacing="10" style="border: blue solid thin">
+    <caption><h2>Products List</h2></caption>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+    <tbody id="productList">
+
+    </tbody>
+
+</table>
+
+<script type="text/javascript">
+    function appRun() {
+        productManagement.init();
+        var data = productManagement.fetchAll();
+    }
+
+    function createNew() {
+        //document.getElementById('newproduct').style.display = 'block';
+        //document.getElementById('editproduct').style.display = 'none';
+    }
+
+    function closeNew() {
+        document.getElementById('newproduct').style.display = 'none';
+    }
+
+    function closeEdit() {
+        document.getElementById('editproduct').style.display = 'none';
+    }
+</script>
+</body>
+</html>

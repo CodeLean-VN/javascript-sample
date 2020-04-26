@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giai phuong trinh bac 2 su dung lop/doi tuong</title>
+</head>
+<body>
+<script type="text/javascript">
+    //1. Xay dung lop
+    //a, b, c: goi la cac thuoc tinh
+    function GiaiPhuongTrinhBacHai(a, b, c) {
+
+        //Xay dung cac phuong thuc cua lop
+        //1. Muc dich: Tinh delta dua vao cac he so a, b, c
+        //2. Ten phuong thuc: tinhDelta
+        //3. Dau vao: ko co
+        //4. Dau ra: delta
+        this.tinhDelta = function () {
+            var delta = b * b - 4 * a * c;
+            return delta;
+        }
+
+        //1. Muc dich: giai phuong trinh bac 2 khi biet delta
+        //2. Ten phuong thuc: giaiPhuongTrinh
+        //3. Dau vao: delta
+        //4. Dau ra: ko co
+        this.giaiPhuongTrinh = function (delta) {
+            if (delta < 0) {
+                alert("Phuong trinh vo nghiem");
+            } else if (delta > 0) {
+                var x1 = -b + Math.sqrt(delta) / 2 * a;
+                var x2 = -b - Math.sqrt(delta) / 2 * a;
+                alert("Phuong trinh co 2 nghiem phan biet.\n x1 = " + x1 + "\nx2 = " + x2);
+            } else {
+                //delta = 0
+                var x = -b / 2 * a;
+                alert("Phuong trinh co nghiem kep x1 = x2 = " + x);
+            }
+        }
+    }
+
+
+    //2. Tao doi tuong
+    var pt1 = new GiaiPhuongTrinhBacHai(-2, 3, 1);
+
+    //3. Truy vao vao phuong thuc | thuoc tinh cua lop
+    var delta = pt1.tinhDelta();
+    pt1.giaiPhuongTrinh(delta);
+
+
+</script>
+</body>
+</html>

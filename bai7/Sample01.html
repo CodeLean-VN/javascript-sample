@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sample 01</title>
+</head>
+<script type="text/javascript">
+    //tao ham loadText()
+    function loadText() {
+        var pvar = document.getElementById("pid");
+        pvar.style.fontSize = "44px";
+        pvar.style.color = "red";
+    }
+
+    function changeStyleP() {
+        var ps = document.getElementsByTagName("p");
+        ps[0].style.color = "red";
+        ps[1].style.color = "red";
+        ps[2].style.color = "blue";
+        ps[3].style.color = "red";
+        ps[4].style.color = "red";
+
+        for (var i = 0; i < ps.length; i++) {
+            ps[i].style.color = "red";
+        }
+    }
+
+</script>
+<body onload="loadText()">
+
+<p id="pid">Day la the p</p>
+
+<button onclick="changeStyleP()">Thay doi the style cho the p</button>
+<p>Day la the p</p>
+<p>Day la the p</p>
+<p>Day la the p</p>
+<p>Day la the p</p>
+<p>Day la the p</p>
+
+
+</body>
+</html>

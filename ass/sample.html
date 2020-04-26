@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+    What color do you prefer?<br>
+    <input id="red" name="colors" type="radio" value="">Red<br>
+    <input id="blue" name="colors" type="radio" value="">Blue
+
+    <br/><br/>
+    Hobbies<br/>
+    <input id="reading" name="hobby" type="checkbox" value="">Reading
+    <input id="typing" name="hobby" type="checkbox" value="">Typing
+    <input id="coding" name="hobby" type="checkbox" value="">Coding
+
+
+</form>
+
+<button onclick="validate()">Uncheck Info</button>
+
+<script>
+    function validate() {
+        var isColorRed = document.getElementById("red");
+        var isColorBlue = document.getElementById("blue");
+        if (isColorRed.checked == false && isColorBlue.checked == false) {
+            alert("Hay lua chon");
+            return;
+        }
+
+        var isReading = document.getElementById("reading");
+        var isCoding = document.getElementById("coding");
+        var isTyping = document.getElementById("typing");
+        if (isReading.checked == false && isCoding.checked == false && isTyping.checked == false) {
+            alert("Hay lua chon so thic!!!")
+            return;
+        }
+
+
+    }
+</script>
+
+</body>
+</html>

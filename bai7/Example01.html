@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Style Changes</title>
+</head>
+<script type="text/javascript">
+    function changeColorRed() {
+        var pid = document.getElementById("pid");
+        pid.style.color = "red";
+        pid.style.backgroundColor = "blue";
+    }
+
+    function changeColorBlue() {
+        var pid = document.getElementById("pid");
+        pid.style.color = "blue";
+        pid.style.backgroundColor = "black";
+    }
+
+</script>
+
+<body>
+
+<p id="pid">Day la mot doan van ban ban</p>
+<form>
+    <button onclick="changeColorRed()" type="button">Chuyen thanh mau do</button>
+    <button onclick="changeColorBlue()" type="button">Chuyen thanh mau xanh</button>
+    <input type="reset" value="Reset">
+</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+    <script type="text/javascript">
+        var anhAr = [];
+        var index = 0;
+
+        function loadAnh() {
+            for (var i = 0; i < 3; i++) {
+                anhAr[i] = new Image();
+                anhAr[i].src = "img" + (i + 1) + ".png"; //img1.png, img2.png, img3.png
+            }
+        }
+
+        function next() {
+            if (index < 2) {
+                index++;
+                document.getElementById("hoa").src = anhAr[index].src;
+            }
+        }
+
+        function back() {
+            if (index > 0) {
+                index--;
+                document.getElementById("hoa").src = anhAr[index].src;
+            }
+        }
+    </script>
+</head>
+<body onload="loadAnh();">
+<img height="300" id="hoa" src="img1.png" width="300"/>
+
+<input onclick="back();" type="button" value="back"/>
+<input onclick="next();" type="button" value="next"/>
+</body>
+</html>

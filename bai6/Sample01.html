@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample 01</title>
+</head>
+<body>
+<script type="text/javascript">
+    function changeValue() {
+        //alert("ban vua click vao noi dung cua toi!");
+        var content = document.getElementById("pid");
+
+        //lay noi dung the p
+        alert(content.innerText);
+
+        //thay doi noi dung the p
+        content.innerHTML = "Noi dung moi duoc thay the cho noi dung cu!";
+    }
+
+    function changeText() {
+        var pary = document.getElementsByClassName("parray");
+
+        pary[2].innerHTML = "May vua thay doi tao";
+
+        //alert("Ban vua truy cap vao toi" + pary[0].innerText);
+    }
+</script>
+
+
+<p id="pid" onclick="changeValue()"> Day la the P khi chua bi thay doi noi dung </p>
+
+<p class="parray">Noi dung p1</p>
+<p class="parray">Noi dung p2</p>
+<p class="parray">Noi dung p3</p>
+<p class="parray">Noi dung p4</p>
+<p class="parray">Noi dung p5</p>
+<button onclick="changeText()">Click Me</button>
+
+</body>
+</html>

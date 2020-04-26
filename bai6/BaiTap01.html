@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 01</title>
+</head>
+<body>
+<script>
+    function tinhTien() {
+        //b1: Lay duoc gia tri nhap vao text va chuyen sang dang so
+        var soluong = Number(document.getElementById("soluong").value);
+
+        //b2: thay doi lai gia tri cho the p
+        var pchange = document.getElementById("tongTien");
+        var tong = soluong * 1950;
+        pchange.innerHTML = "Amount: $" + tong;
+    }
+</script>
+<form>
+    <p>iPhone 9:
+        <input id="soluong" type="text">
+        <input onclick="tinhTien()" type="button" value="OK">
+    </p>
+    <hr/>
+    <p style="font-weight: bold"> Name: iPhone9</p>
+    <p id="tongTien" style="font-weight: bold"> Amount: $5850</p>
+</form>
+</body>
+</html>

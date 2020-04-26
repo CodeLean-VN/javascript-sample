@@ -13,6 +13,7 @@
         var sum = Number(firstNumber) + Number(secondNumber);
 
         alert("Tong cua hai so la: " + sum);
+        document.getElementById("result").innerHTML = sum;
     }
 
     function calSub() {
@@ -54,5 +55,6 @@
     <input onclick="calDiv()" type="button" value="/">
 </form>
 
+<p>Result: <span id="result"></span></p>
 </body>
 </html>

@@ -6,7 +6,6 @@ function Temperature(degreeC) {
     //4. Dau ra: do F
     this.convertToF = function () {
         degreeF = (degreeC - 32) / 18;
-        document.write(degreeF);
         return degreeF;
     }
 }

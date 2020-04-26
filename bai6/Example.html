@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+
+    function changeText() {
+        var pElement = document.getElementById("pid");
+        //lay noi dung
+        alert(pElement.innerText);
+
+        //thay doi noi dung
+        pElement.innerHTML = "Noi  dung vua bi thay doir";
+        console.log(pElement.innerText);
+    }
+
+    function changeValue() {
+        var parray = document.getElementsByClassName("pvar");
+        //parray[0].innerHTML = "P1 vua bi thay doi";
+        //parray[1].innerHTML = "P2 vua bi thay doi";
+        //parray[2].innerHTML = "P3 vua bi thay doi";
+        //parray[3].innerHTML = "P4 vua bi thay doi";
+        //parray[4].innerHTML = "P5 vua bi thay doi";
+
+        for (var i = 0; i < parray.length; i++) {
+            parray[i].innerHTML = "P" + (i + 1) + " vua bi thay doi";
+        }
+    }
+
+
+</script>
+
+<p id="pid" onclick="changeText()">Day la mot doan van ban!!!!</p>
+
+
+<p class="pvar"> day la the p1</p>
+<p class="pvar"> day la the p2</p>
+<p class="pvar"> day la the p3</p>
+<p class="pvar"> day la the p4</p>
+<p class="pvar"> day la the p5</p>
+<button onclick="changeValue()" type="button">Click Me</button>
+</body>
+</html>

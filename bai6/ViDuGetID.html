@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vi du ve getElement</title>
+</head>
+<body>
+<script type="text/javascript">
+    function clickMe() {
+        var pvar = document.getElementById("pid");
+        alert(pvar.innerText);
+        pvar.innerHTML = "Gia tri se thay doi se duoc dua vao day!!!";
+    }
+
+    function changeValue() {
+        var pary = document.getElementsByClassName("parray");
+        //pary[0].innerHTML = "Ban vua thay doi P1";
+        //pary[1].innerHTML = "Ban vua thay doi P2";
+        //pary[2].innerHTML = "Ban vua thay doi P3";
+        //pary[3].innerHTML = "Ban vua thay doi P4";
+        //pary[4].innerHTML = "Ban vua thay doi P5";
+
+        for (var i = 0; i < pary.length; i++) {
+            pary[i].innerHTML = "Ban vua thay doi P" + (i + 1);
+        }
+
+    }
+
+</script>
+
+<p id="pid" onclick="clickMe()">Day la mot doan van ban!!!!</p>
+
+<p class="parray">Day la doan van ban p1</p>
+<p class="parray">Day la doan van ban p2</p>
+<p class="parray">Day la doan van ban p3</p>
+<p class="parray">Day la doan van ban p4</p>
+<p class="parray">Day la doan van ban p5</p>
+
+<button onclick="changeValue()" type="button">Click P</button>
+
+</body>
+</html>

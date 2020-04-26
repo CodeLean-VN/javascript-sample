@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 1</title>
+</head>
+<body>
+<script type="text/javascript">
+    function caculator() {
+
+        //- Lấy giá trị nhập vào text
+        var number = document.getElementById("myNumber");
+
+        //- Tinh tien = gia tri nhap vao text * 1950
+        var amount = number.value * 1950;
+
+        ///- Gan “tinh tien” cho phan tu co id amount
+        var am = document.getElementById("amount");
+        am.innerHTML = "" + amount;
+    }
+</script>
+<form>
+    iPhone9
+    <input id="myNumber" type="text" value="">
+    <button onclick="caculator()" type="button">OK</button>
+    <hr>
+    <p style="font-weight: bold">Name: iPhone 9</p>
+    <p style="font-weight: bold"> Amount: $<span id="amount">5850</span></p>
+</form>
+
+</body>
+</html>

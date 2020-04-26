@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap 1</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+    function tinhTien() {
+        //lay gia tri nhap vao text
+        var quality = document.getElementById("quality").value;
+
+        //tinh tien
+        var total = quality * 1950;
+
+        //gan span
+        var am = document.getElementById("amount");
+        am.innerHTML = "$" + total;
+    }
+
+</script>
+
+<fom>
+    iPhone9
+    <input id="quality" type="number">
+    <input onclick="tinhTien()" type="button" value="OK">
+    <hr>
+    <p style="font-weight: bold">Name: iPhone9</p>
+    <p style="font-weight: bold">Amount: <span id="amount">$5850</span></p>
+
+</fom>
+
+</body>
+</html>

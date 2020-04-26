@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT2</title>
+</head>
+<body>
+<script>
+    function them(btn) {
+        var row = btn.parentElement.parentElement.cloneNode(true);
+        //var row = btn.parentElement.parentElement;
+
+        var btnXoa = row.getElementsByTagName("button")[0];
+        btnXoa.innerText = "Xoa";
+        btnXoa.setAttribute('onclick', 'xoa(this)');
+
+        document.getElementById("cart").appendChild(row);
+    }
+</script>
+
+<h3>DANH MUC HANG HOA </h3>
+<TABLE border="1">
+    <tr>
+        <td>IP 9</td>
+        <td>$2700</td>
+        <td>
+            <button color="blue" onclick="them(this)">Them</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Samsung Star</td>
+        <td>$1500</td>
+        <td>
+            <button onclick='them(this)'>Them</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Nokia 2020</td>
+        <td>$1200</td>
+        <td>
+            <button onclick='them(this)'>Them</button>
+        </td>
+    </tr>
+    <tr>
+        <td>Sony Xperia</td>
+        <td>$1700</td>
+        <td>
+            <button onclick='them(this)'>Them</button>
+        </td>
+    </tr>
+</TABLE>
+<h3> GIO HANG CUA BAN </h3>
+<table border="1" id="cart">
+
+</table>
+<h3>TONG SO TIEN: $<span id="tong">0</span></h3>
+</body>
+</html>
